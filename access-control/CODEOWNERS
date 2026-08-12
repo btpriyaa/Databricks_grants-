@@ -1,0 +1,11 @@
+# Platform team must review anything that changes the RBAC engine or the privilege allow-list.
+/access-control/modules/          @platform-team
+/policies/roles.yaml              @platform-team
+/main.tf                          @platform-team
+/versions.tf                      @platform-team
+
+# Each domain team owns (and can self-approve, per your branch protection config) only their own
+# policy file - this is what makes access requests self-service.
+/policies/domains/marketing.yaml  @marketing-team-lead
+/policies/domains/finance.yaml    @finance-team-lead
+/policies/domains/sales.yaml      @sales-team-lead
